@@ -1,0 +1,38 @@
+{
+  "name": "server-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=develpment ts-node-dev src",
+    "lint": "eslint .",
+    "test-2to2": "tsc --noEmit && docker-compose up -d && cross-env NODE_ENV=test node --loader tsx --test  src/__tests__/2to2/*.test.ts",
+    "test-unit": "tsc --noEmit && cross-env NODE_ENV=test node --loader tsx --test  src/__tests__/unit/*.test.ts",
+    "build": "tsc",
+    "start": "cross-env NODE_ENV=production node build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcrypt": "5.0.2",
+    "@types/cors": "2.8.17",
+    "@types/express": "4.17.21",
+    "@types/mongoose": "5.11.97",
+    "@types/supertest": "6.0.2",
+    "supertest": "7.0.0",
+    "ts-node": "10.9.2",
+    "ts-node-dev": "2.0.0",
+    "tsx": "4.10.5",
+    "typescript": "5.4.5"
+  },
+  "dependencies": {
+    "bcrypt": "5.1.1",
+    "cors": "2.8.5",
+    "cross-env": "7.0.3",
+    "dotenv": "16.4.5",
+    "express": "4.19.2",
+    "express-async-errors": "3.1.1",
+    "mongoose": "8.3.3"
+  }
+}

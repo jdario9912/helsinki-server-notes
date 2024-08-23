@@ -1,0 +1,22 @@
+@baseUrl = http://localhost:3002
+
+### GET
+GET {{baseUrl}}/api/info
+
+### Get all notes
+GET {{baseUrl}}/api/notes
+
+### Get a note
+GET {{baseUrl}}/api/notes/664bd9467dc1b95a4120293f
+
+### Delete note
+DELETE {{baseUrl}}/api/notes/66358dde98d60c5acfa03410
+
+### Add note
+POST {{baseUrl}}/api/notes
+content-type: application/json
+
+{
+  "content": "wasi",
+  "important": false
+}
